@@ -10,7 +10,7 @@
 ### 1. Launch an Windows instance on GCP
    - To create an Windows instance in GCP, refer to this [link](https://cloud.google.com/compute/docs/create-windows-server-vm-instance).
 
-### 2. Setup RDS (Relational Database Service) for PostgreSQL
+### 2. Setup PostgreSQL Database
 If you want to set up a PostgreSQL Database on  Windows instance, follow the first step. If you prefer using a managed Database in GCP, follow the second step.
 
 #### a. Setting up PostgreSQL in a Windows instance
@@ -59,7 +59,6 @@ If you want to set up a PostgreSQL Database on  Windows instance, follow the fir
 
   - To create a SQL Database in GCP, refer to this [guide](https://cloud.google.com/sql/docs/sqlserver/create-instance). Additionally, for instance information, you can refer to this [link](https://cloud.google.com/sql/docs/sqlserver/instance-info).
 
-  https://cloud.google.com/compute/docs/instances/windows/creating-windows-persistent-disk-snapshot
   
 ## To Enable Backup compatibility of Bold BI application
 
@@ -69,8 +68,7 @@ If you want to set up a PostgreSQL Database on  Windows instance, follow the fir
 ![Snapshot of  VM](images/snapshot-VM.png)
 - For detailed instructions to create snapshot of your VM, follow the link: [Creating a Windows persistent disk snapshot](https://cloud.google.com/compute/docs/instances/windows/creating-windows-persistent-disk-snapshot)
 
-### 2.PostgreSQL Backup and Restore in GCP (Managed instance)
-### 3. Restore the Snapshot of Virtual Machine
+### 2. Restore the Snapshot of Virtual Machine
 - Once you have created the snapshot, it will appear as shown in the image below. Select the "Create instance" button at the top. 
 ![Create Instance](images/create-instance.png)
 -  You can then enter the details for your restored VM, such as the name, CPU, storage, and region.
@@ -79,9 +77,25 @@ If you want to set up a PostgreSQL Database on  Windows instance, follow the fir
 ![alt text](images/Snaprestoredetails.png)
 - For detailed instructions to create snapshot of your VM, follow the link: [Restoring a Windows snapshot](https://cloud.google.com/compute/docs/disks/restore-snapshot)
 
+
+### 3.PostgreSQL Backup and Restore in GCP (Managed instance)
+- Navigate to your created database. In the left pane, select "Backup" and click the "Create Backup" button. 
+![Creation of Backup DB](images/create-backupDB.png)
+-  Fill in details such as description and select the location. Click "Create".
+![Detail of Backup](images/Created_backupDB.png)
+- In the backups tab, locate your backup data. Click "Restore". 
+![Retore button](images/RestoreDB.png)
+- In the "Instance to be overwritten" column, select the target database instance. Enter the instance ID of the target DB. Click "Restore". 
+![Restored DB details](images/RestoreDBDetails.png)
+
+**Note:**
+
+- Before restoring, ensure that you have a target database instance available.
+ 
+
 ## 4. Reset the Connection string to use restored PostgreSQL Database
 
 - To use the restored database, you'll need to reset the database on your Virtual Machine.
-Detailed steps can be found in the following documentation: [Reset Application Database on Windows](https://help.boldbi.com/utilities/bold-bi-command-line-tools/reset-application-database/#windows)
+Detailed steps can be found in the following documentation: [Reset Application Database on Linux](https://help.boldbi.com/utilities/bold-bi-command-line-tools/reset-application-database/#linux)
 
 
