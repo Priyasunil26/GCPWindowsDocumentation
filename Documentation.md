@@ -24,6 +24,11 @@ If you want to set up a PostgreSQL Database on  Windows instance, follow the fir
 #### b. Setting up PostgreSQL Database in GCP
 - For instructions on creating a PostgreSQL Database in GCP, please refer to this [link](https://cloud.google.com/sql/docs/postgres/create-instance/). Additionally, you can refer to this [link](https://cloud.google.com/sql/docs/postgres/instance-info) for instance information.
 
+**Information:** 
+  - To create a MySQL Database in GCP, you can follow the steps outlined in this [guide](https://cloud.google.com/sql/docs/mysql/create-instance). For information about your instance, refer to this [link](https://cloud.google.com/sql/docs/mysql/instance-info).
+
+  - To create a SQL Database in GCP, refer to this [guide](https://cloud.google.com/sql/docs/sqlserver/create-instance). Additionally, for instance information, you can refer to this [link](https://cloud.google.com/sql/docs/sqlserver/instance-info).
+
 ### 3. Bold BI Installation
 
 - Features to be enabled in IIS to run Bold BI in Windows Server OS. Refer to this [link](https://help.boldbi.com/faq/features-needed-to-enable-in-iis-to-run-bold-bi-in-win-server-os/).
@@ -52,13 +57,6 @@ If you want to set up a PostgreSQL Database on  Windows instance, follow the fir
 **Note:**
 
   If you are configuring DNS mapping for your virtual machine (VM), it's important to also map the snapshot of your VM. 
-
-
-**Information:** 
-  - To create a MySQL Database in GCP, you can follow the steps outlined in this [guide](https://cloud.google.com/sql/docs/mysql/create-instance). For information about your instance, refer to this [link](https://cloud.google.com/sql/docs/mysql/instance-info).
-
-  - To create a SQL Database in GCP, refer to this [guide](https://cloud.google.com/sql/docs/sqlserver/create-instance). Additionally, for instance information, you can refer to this [link](https://cloud.google.com/sql/docs/sqlserver/instance-info).
-
   
 ## To Enable Backup compatibility of Bold BI application
 
@@ -96,6 +94,6 @@ If you want to set up a PostgreSQL Database on  Windows instance, follow the fir
 ## 4. Reset the Connection string to use restored PostgreSQL Database
 
 - To use the restored database, you'll need to reset the database on your Virtual Machine.
-Detailed steps can be found in the following documentation: [Reset Application Database on Linux](https://help.boldbi.com/utilities/bold-bi-command-line-tools/reset-application-database/#linux)
+Detailed steps can be found in the following documentation: [Reset Application Database on Windows](https://help.boldbi.com/utilities/bold-bi-command-line-tools/reset-application-database/#windows)
 
 
