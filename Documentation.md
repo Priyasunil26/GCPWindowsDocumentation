@@ -75,6 +75,9 @@ If you want to set up a PostgreSQL Database on  Windows instance, follow the fir
 ![alt text](images/Snaprestoredetails.png)
 - For detailed instructions to create snapshot of your VM, follow the link: [Restoring a Windows snapshot](https://cloud.google.com/compute/docs/disks/restore-snapshot)
 
+**Note:** 
+  If you are not using a managed database server or an Azure blob container, creating a snapshot of your virtual machine is adequate. You can then proceed to step 4.
+
 
 ### 3.PostgreSQL Backup and Restore in GCP (Managed instance)
 - Navigate to your created database. In the left pane, select "Backup" and click the "Create Backup" button. 
